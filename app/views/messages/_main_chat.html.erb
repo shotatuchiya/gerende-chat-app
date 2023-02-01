@@ -6,7 +6,13 @@
   </div>
   <div class="right-header">
     <div class="header-button">
-      <%= link_to "チャットを終了する", room_path(@room), method: :delete %>
+      <% if user_signed_in? %>
+        <%= link_to current_user.name, edit_user_path(current_user) %>
+        <%= link_to "ログアウト", root_path, method: :delete %>
+      <% else %>
+        <%= link_to "ログイン", root_path %>
+        <%= link_to "新規登録", root_path %>
+      <% end %>
     </div>
   </div>
 </div>

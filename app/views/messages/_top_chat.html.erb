@@ -1,0 +1,22 @@
+<div class="chat-header">
+  <div class="left-header">
+    <div class="header-title">
+    </div>
+  </div>
+  <div class="right-header">
+    <div class="header-button">
+      <% if user_signed_in? %>
+        <div class="nav__right">
+          <%= link_to current_user.name, edit_user_path(current_user) %>
+          <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+        </div>
+      <% else %>
+        <div class="nav__right">
+          <%= link_to "ログイン", new_user_session_path %>
+          <%= link_to "新規登録", new_user_registration_path %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+詳細

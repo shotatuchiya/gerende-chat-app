@@ -1,6 +1,6 @@
 <div class='chat-room-form'>
   <h1>新規チャットルーム</h1>
-  <%=form_with model: @room, local: true do |f|%>
+  <%=form_with(model: @room, local: true) do |f|%>
     <div class='chat-room-form__field'>
       <div class='chat-room-form__field--left'>
         <%= f.label :name, :チャットルーム名, class: 'chat-room-form__label'%>
@@ -10,20 +10,6 @@
       </div>
     </div>
     <div class='chat-room-form__field'>
-    </div>
-    <div class='chat-room-form__field'>
-      <div class='chat-room-form__field--left'>
-        <label class='chat-room-form__label' for='chat_room_チャットメンバー'>チャットメンバー</label>
-      </div>
-      <div class='chat-room-form__field--right'>
-      <select name="room[user_ids][]">
-          <option value="">チャットするユーザーを選択してください</option>
-          <% User.where.not(id: current_user.id).each do |user| %>
-            <option value=<%= user.id %>><%= user.name %></option>
-          <% end %>
-        </select>
-        <input name="room[user_ids][]" type="hidden" value=<%= current_user.id %>>
-      </div>
     </div>
     <div class='chat-room-form__field'>
       <div class='chat-room-form__field--left'></div>
