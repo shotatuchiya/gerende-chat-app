@@ -10,7 +10,7 @@ class RoomsController < ApplicationController
 
   def create
     @room = Room.new(room_params)
-    binding.pry
+    @room.user = current_user
     if @room.save
       redirect_to root_path
     else
