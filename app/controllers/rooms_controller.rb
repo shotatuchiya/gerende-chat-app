@@ -1,5 +1,5 @@
 class RoomsController < ApplicationController
-  
+  before_action :move_to_new, only: :new
   def new
     @room = Room.new
   end
@@ -28,6 +28,12 @@ class RoomsController < ApplicationController
 
   def room_params
     params.require(:room).permit (:name)
+  end
+
+  def move_to_new
+    unless user_signed_in? && current_user.admin?
+      redirect_to root_path
+    end
   end
 
 end

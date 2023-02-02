@@ -5,25 +5,21 @@
 </div>
 
 <div class="rooms">
-  <% if user_signed_in? %>
     <% @rooms.each do |room| %>
       <div class="room">
         <div class="room-name">
           <%= link_to room.name, room_messages_path(room) %>
         </div>
       </div>
-    <% end %>
   <% end %>
   <div class="room">
     <div class="room-name">
       <%= link_to "スキー場 リンク", root_path %>
     </div>
   </div>
-  <% if user_signed_in? %>
-<% if current_user.admin? %>
-  <div class="room-name">
-    <%= link_to "管理ページ", new_room_path %>
-  </div>
-<% end %>
-<% end %>
+  <% if user_signed_in? && current_user.admin? %>
+      <div class="room-name">
+        <%= link_to "管理ページ", new_room_path %>
+      </div>
+  <% end %>
 </div>
