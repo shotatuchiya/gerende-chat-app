@@ -4,7 +4,7 @@ class MessagesController < ApplicationController
     @message = Message.new
     @room = Room.find(params[:room_id])
     @rooms = Room.all
-    @messages = @room.messages.includes(:user)
+    @messages = @room.messages.includes(:user).order("created_at DESC")
   end
 
 

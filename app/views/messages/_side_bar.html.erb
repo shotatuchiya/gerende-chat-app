@@ -14,12 +14,19 @@
   <% end %>
   <div class="room">
     <div class="room-name">
+      <%= link_to "更新履歴", root_path %>
+    </div>
+  </div>
+  <div class="room">
+    <div class="room-name">
       <%= link_to "スキー場 リンク", root_path %>
     </div>
   </div>
   <% if user_signed_in? && current_user.admin? %>
+    <div class="room">
       <div class="room-name">
         <%= link_to "管理ページ", new_room_path %>
       </div>
+    </div>
   <% end %>
 </div>
