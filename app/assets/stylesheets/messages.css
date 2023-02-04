@@ -38,7 +38,7 @@
 }
 
 .room {
-  padding: 20px 0 40px;
+  padding: 20px 0 20px;
 }
 
 .room-name a {
@@ -156,6 +156,16 @@
 
 .hidden {
   display: none;
+}
+
+.top-main{
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.top-title{
+  position: relative;
 }
 
 .top-image{
