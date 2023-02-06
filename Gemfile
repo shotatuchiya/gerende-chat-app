@@ -62,4 +62,7 @@ gem 'image_processing', '~> 1.2'
 
 group :production do
   gem 'pg'
+
+  gem 'bullet', group: 'development'
+
 end
