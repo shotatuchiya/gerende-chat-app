@@ -1,12 +1,10 @@
 Rails.application.configure do
   config.after_initialize do
     Bullet.enable = true
-    Bullet.alert = true
+    Bullet.alert = false
     Bullet.bullet_logger = true
     Bullet.rails_logger = true
     Bullet.console = true
-    Bullet.bugsnag = true
-    Bullet.airbrake = true
     Bullet.add_footer = true
     Bullet.stacktrace_includes = [ 'your_gem', 'your_middleware' ]
   end
