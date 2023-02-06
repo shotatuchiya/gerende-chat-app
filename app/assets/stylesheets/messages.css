@@ -159,24 +159,19 @@
 }
 
 .top-main{
+  width: 100vw;
+  height: 30vh;
   flex-direction: column;
   align-items: center;
   position: relative;
-}
-
-.top-title{
-  position: relative;
-}
-
-.top-image{
-  width: 100%;
-  height: 30vh;
+  background-image: url('25744580_l.jpg');
+  background-size: cover;
 }
 
 .service-items {
   width: calc(100vw - 300px);
-  height: 50vh;
-  margin-top: 20px;
+  height: 35vh;
+  margin-top: 250px;
   display: flex;
   justify-content: space-between;
   padding: 0 50px;
