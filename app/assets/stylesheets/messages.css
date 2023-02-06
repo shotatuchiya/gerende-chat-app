@@ -159,13 +159,15 @@
 }
 
 .top-main{
-  width: 100vw;
+  width: 100%;
   height: 30vh;
   flex-direction: column;
   align-items: center;
   position: relative;
   background-image: url('25744580_l.jpg');
   background-size: cover;
+  font-size: 25px;
+  padding: 20px;
 }
 
 
