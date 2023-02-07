@@ -30,11 +30,11 @@
   <%= form_with model: [@room, @message], class: 'form', local: true do |f| %>
     <div class="form-input">
       <%= f.text_field :content, class: 'form-message', placeholder: 'メッセージ入力' %>
-    </div>
       <label class="form-image">
         <span class="image-file">画像</span>
         <%= f.file_field :image, class: 'hidden' %>
       </label>
+    </div>
     <%= f.submit '送信', class: 'form-submit',id: "submit" %>
   <% end %>
 <% end %>

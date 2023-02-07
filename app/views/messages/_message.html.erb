@@ -15,7 +15,7 @@
   </div>
   <% if user_signed_in? && current_user.id == message.user_id %>
     <div class="message-delete">
-      <%= link_to "削除", room_message_path(message.room.id, message.id), method: :delete %>
+      <%= link_to "削除", room_message_path(message.room.id, message.id), method: :delete, class:"message-delete" %>
     </div>
   <% end %>
 </div>
