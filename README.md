@@ -1,3 +1,5 @@
+/bundlephobia/:format/:packageName
+
 # snow chat
 
  今回作成したアプリケーション名になります。
