@@ -1,4 +1,3 @@
-/bundlephobia/:format/:packageName
 
 # snow chat
 
