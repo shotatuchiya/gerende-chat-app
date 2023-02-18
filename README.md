@@ -65,3 +65,12 @@
 
 - belongs_to :room
 - belongs_to :user
+
+# 補足
+
+今回デプロイに　Render　を使用しました。閲覧する際にページの読み込みに少し時間が掛かる場合があります。
+
+Renderでは時間でデータベースが停止してしまうので、起動する際に時間が掛かっているのでご了承ください。
+
+- has_many :roomsnい
+- has_many :rooms
